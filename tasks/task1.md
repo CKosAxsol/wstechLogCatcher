@@ -16,3 +16,6 @@ Logdateien mit gleichen Namen werden überschrieben, in der Ausgabe soll hierzu 
 Das Skript soll in der Ausgabe eine Fortschrittsanzeige und eine Art Mini-Log haben, damit man weiß dass das Skript gerade arbeitet.
 
 Skriptsprache soll hierbei python sein.
+
+Ich möchte auch eine Möglichkeit das Skript auszuführen, wenn man absolut keine Ahnung von Programmieren und Konsolen hat. So etwas wie eine via Doppelklick anklickbare Datei. Die Umgebung ist hier in erster Linie Windows.
+Für das `start_log_catcher.bat` soll das standard zielverzeichnis `C:/temp/logs` sein, wenn der Benutzer kein anderes angibt.

@@ -4,11 +4,16 @@
 sequenceDiagram
   participant U as Benutzer
   participant M as main.py
+  participant I as Interaktive Eingabe
   participant S as Credential Store
   participant F as FTP-Server
   participant D as Zielordner
 
-  U->>M: Start mit IP, Tagen und Zielordner
+  U->>M: Start mit Parametern oder per Doppelklick
+  alt Start ohne Parameter
+    M->>I: Eingaben abfragen
+    I-->>M: IP, Port, Tage, Zielordner
+  end
   M->>S: Gespeicherte Zugangsdaten laden
   alt Zugangsdaten fehlen oder sind ungültig
     M->>U: Username und Password abfragen

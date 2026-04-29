@@ -33,6 +33,18 @@ Optionalen FTP-Port angeben:
 python main.py --ip 192.168.1.10 --port 21 --days 3 --target C:\Logs
 ```
 
+Interaktiver Start ohne Parameter:
+
+```powershell
+python main.py
+```
+
+Windows-Doppelklick-Start:
+
+```text
+start_log_catcher.bat
+```
+
 ## Nutzung
 
 Beim ersten Aufruf fragt das Skript nach `username` und `password`. Die Daten werden lokal pro FTP-Ziel in `.ftp_credentials.json` gespeichert.
@@ -44,6 +56,9 @@ Während des Downloads zeigt das Skript:
 - einen kleinen Aktivitäts-Log in der Konsole
 - den Fortschritt über alle ausgewählten Dateien
 - einen Hinweis, wenn vorhandene Zieldateien überschrieben werden
+
+Für Benutzer ohne Konsolenkenntnisse kann unter Windows die Datei `start_log_catcher.bat` per Doppelklick gestartet werden. Das Skript fragt dann alle benötigten Angaben nacheinander ab.
+Wenn beim Zielordner nichts eingegeben wird, nutzt dieser einfache Start automatisch `C:/temp/logs`.
 
 ## Dokumentation
 

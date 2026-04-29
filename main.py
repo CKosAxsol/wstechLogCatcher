@@ -7,6 +7,7 @@ from functions.credential_store import (
     CredentialStore,
     request_credentials,
 )
+from functions.interactive_mode import collect_runtime_arguments
 from functions.ftp_download import (
     connect_ftp,
     download_logs,
@@ -39,6 +40,15 @@ def parse_arguments() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def resolve_arguments() -> argparse.Namespace:
+    if len(sys.argv) == 1:
+        # Ohne Parameter wechselt das Skript in einen einfachen Frage-Antwort-Modus.
+        # So kann es auch per Doppelklick genutzt werden, ohne dass jemand Befehle kennen muss.
+        return collect_runtime_arguments()
+
+    return parse_arguments()
+
+
 def load_working_credentials(store: CredentialStore, server_key: str) -> tuple[str, str]:
     saved_credentials = store.get(server_key)
     if saved_credentials is None:
@@ -66,7 +76,7 @@ def ensure_valid_credentials(
 
 
 def main() -> int:
-    args = parse_arguments()
+    args = resolve_arguments()
     if args.days < 0:
         print("Die Anzahl der Tage muss 0 oder groesser sein.")
         return 1

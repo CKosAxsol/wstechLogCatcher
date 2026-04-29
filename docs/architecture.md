@@ -7,9 +7,10 @@ Dieses Projekt besteht bewusst aus wenigen, klar getrennten Python-Modulen.
 ```mermaid
 flowchart TD
   A[main.py] --> B[credential_store.py]
-  A --> C[ftp_download.py]
-  A --> D[console_output.py]
-  C --> D
+  A --> C[interactive_mode.py]
+  A --> D[ftp_download.py]
+  A --> E[console_output.py]
+  D --> E
 ```
 
 ## Module
@@ -28,6 +29,10 @@ Steuert den gesamten Ablauf:
 ### `functions/credential_store.py`
 
 Verwaltet gespeicherte Zugangsdaten je FTP-Ziel in der Datei `.ftp_credentials.json`.
+
+### `functions/interactive_mode.py`
+
+Fragt die wichtigsten Eingaben direkt in der Konsole ab, wenn das Skript ohne Parameter gestartet wird. Dadurch ist ein einfacher Windows-Start per Doppelklick möglich.
 
 ### `functions/ftp_download.py`
 
