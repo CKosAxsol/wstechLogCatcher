@@ -1,3 +1,5 @@
+beachte imemr die `AGENTS.md`
+
 Über eine FTP Verbindung lassen sich Logfile-CSV Dateien abholen.
 Die Logdateien sind namentlich mit Zeitstempeln abgelegt, z.B. `APS-001249_20260228_000000.csv`
 Die Dateien liegen immer unter FTP Verbindung unter `ftp://$IP$/Log/`

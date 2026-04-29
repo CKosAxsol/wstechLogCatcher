@@ -44,3 +44,12 @@ Während des Downloads zeigt das Skript:
 - einen kleinen Aktivitäts-Log in der Konsole
 - den Fortschritt über alle ausgewählten Dateien
 - einen Hinweis, wenn vorhandene Zieldateien überschrieben werden
+
+## Dokumentation
+
+Weiterführende Projektinformationen liegen unter `docs/`:
+
+- `docs/architecture.md`
+- `docs/development.md`
+- `docs/flows/ftp-log-download.md`
+- `docs/decisions/0001-dokumentationsstruktur.md`
