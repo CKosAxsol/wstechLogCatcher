@@ -6,6 +6,8 @@ Dieses Projekt besteht bewusst aus wenigen, klar getrennten Python-Modulen.
 
 ```mermaid
 flowchart TD
+  X[start_log_catcher.bat] --> Y[.venv]
+  X --> A[main.py]
   A[main.py] --> B[credential_store.py]
   A --> C[interactive_mode.py]
   A --> D[ftp_download.py]
@@ -14,6 +16,10 @@ flowchart TD
 ```
 
 ## Module
+
+### `start_log_catcher.bat`
+
+Prüft unter Windows, ob Python vorhanden ist. Falls nicht, kann die Batch-Datei eine Installation über `winget` anstoßen. Danach wird eine lokale virtuelle Umgebung erstellt und das Python-Skript darin gestartet.
 
 ### `main.py`
 
@@ -33,6 +39,10 @@ Verwaltet gespeicherte Zugangsdaten je FTP-Ziel in der Datei `.ftp_credentials.j
 ### `functions/interactive_mode.py`
 
 Fragt die wichtigsten Eingaben direkt in der Konsole ab, wenn das Skript ohne Parameter gestartet wird. Dadurch ist ein einfacher Windows-Start per Doppelklick möglich.
+
+### `.venv`
+
+Die lokale Python-Umgebung trennt das Projekt von anderen Python-Installationen auf dem Rechner. Das reduziert Probleme mit fehlenden oder falschen Paketversionen.
 
 ### `functions/ftp_download.py`
 

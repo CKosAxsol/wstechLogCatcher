@@ -27,6 +27,7 @@ python main.py --ip 192.168.1.10 --port 21 --days 3 --target C:\Logs
 
 Unter Windows gibt es zusätzlich `start_log_catcher.bat`. Diese Datei kann per Doppelklick gestartet werden und öffnet einen einfachen Eingabedialog in der Konsole.
 Wenn beim Zielordner keine Eingabe erfolgt, wird automatisch `C:/temp/logs` verwendet.
+Wenn Python fehlt, bietet die Batch-Datei eine Installation über `winget` an. Anschließend wird automatisch eine lokale `.venv`-Umgebung vorbereitet und `requirements.txt` installiert.
 
 ## Wichtige Dateien
 
@@ -35,6 +36,8 @@ Wenn beim Zielordner keine Eingabe erfolgt, wird automatisch `C:/temp/logs` verw
 - `functions/interactive_mode.py`: Eingaben für den einfachen Start ohne Parameter
 - `functions/ftp_download.py`: FTP-Logik und Dateifilterung
 - `functions/console_output.py`: Konsolenmeldungen
+- `start_log_catcher.bat`: einfacher Windows-Start mit Python- und Umgebungsprüfung
+- `requirements.txt`: zentrale Liste für künftig benötigte Python-Pakete
 
 ## Qualitätssicherung
 

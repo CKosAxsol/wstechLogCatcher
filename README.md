@@ -12,6 +12,7 @@ Das Skript verbindet sich mit einem konfigurierbaren FTP-Ziel, filtert Dateien a
 ## Setup
 
 Es werden keine zusätzlichen Python-Abhängigkeiten benötigt.
+Für den einfachen Windows-Start wird bei Bedarf automatisch eine lokale virtuelle Umgebung unter `.venv` erstellt.
 
 ## Wichtige Befehle
 
@@ -59,6 +60,8 @@ Während des Downloads zeigt das Skript:
 
 Für Benutzer ohne Konsolenkenntnisse kann unter Windows die Datei `start_log_catcher.bat` per Doppelklick gestartet werden. Das Skript fragt dann alle benötigten Angaben nacheinander ab.
 Wenn beim Zielordner nichts eingegeben wird, nutzt dieser einfache Start automatisch `C:/temp/logs`.
+Wenn Python auf dem Rechner fehlt, fragt die Batch-Datei nach, ob Python automatisch über `winget` installiert werden soll.
+Danach wird eine lokale `.venv`-Umgebung erstellt und die in `requirements.txt` hinterlegten Pakete werden automatisch installiert.
 
 ## Dokumentation
 

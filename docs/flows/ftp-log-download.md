@@ -3,13 +3,20 @@
 ```mermaid
 sequenceDiagram
   participant U as Benutzer
+  participant B as Batch-Datei
+  participant V as Virtuelle Umgebung
   participant M as main.py
   participant I as Interaktive Eingabe
   participant S as Credential Store
   participant F as FTP-Server
   participant D as Zielordner
 
-  U->>M: Start mit Parametern oder per Doppelklick
+  U->>B: Doppelklick auf start_log_catcher.bat
+  alt Python fehlt
+    B->>U: Installation ueber winget anbieten
+  end
+  B->>V: .venv erstellen und Pakete installieren
+  B->>M: Python-Skript starten
   alt Start ohne Parameter
     M->>I: Eingaben abfragen
     I-->>M: IP, Port, Tage, Zielordner

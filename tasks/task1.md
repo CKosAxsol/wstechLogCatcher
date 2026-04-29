@@ -19,3 +19,6 @@ Skriptsprache soll hierbei python sein.
 
 Ich möchte auch eine Möglichkeit das Skript auszuführen, wenn man absolut keine Ahnung von Programmieren und Konsolen hat. So etwas wie eine via Doppelklick anklickbare Datei. Die Umgebung ist hier in erster Linie Windows.
 Für das `start_log_catcher.bat` soll das standard zielverzeichnis `C:/temp/logs` sein, wenn der Benutzer kein anderes angibt.
+
+Wenn beim Ausführen der Batch-Datei festgestellt wird, dass python nicht installiert ist, soll eine abfrage kommen, ob man python nachinstallieren möchte.
+Fehlende pyhton biblotheken soll das skript danach automatisch in einer `env` umgebung nachinstallieren.

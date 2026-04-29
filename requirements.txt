@@ -1,0 +1,2 @@
+# Dieses Projekt nutzt aktuell nur Python-Standardbibliotheken.
+# Die Datei bleibt bewusst bestehen, damit die Batch-Datei spaeter fehlende Pakete automatisch nachinstallieren kann.
