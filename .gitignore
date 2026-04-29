@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.ftp_credentials.json
+AGENTS.md
+./manifest
+logs/
